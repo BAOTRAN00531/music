@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import java.awt.RenderingHints;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+
 public class Panel extends JPanel {
     public Panel(){
             setOpaque(false);
