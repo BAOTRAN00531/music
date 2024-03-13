@@ -91,7 +91,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panel2.setForeground(new java.awt.Color(204, 204, 255));
+        panel2.setForeground(new java.awt.Color(51, 255, 0));
 
         javax.swing.GroupLayout panel2Layout = new javax.swing.GroupLayout(panel2);
         panel2.setLayout(panel2Layout);
