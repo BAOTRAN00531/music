@@ -1,5 +1,5 @@
 
-package com.mycompany.ui;
+package com.mycompany.swing;
 
 import javax.swing.JPanel;
 import java.awt.RenderingHints;

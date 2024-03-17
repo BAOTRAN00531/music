@@ -22,23 +22,23 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel3 = new com.mycompany.ui.Panel();
+        panel3 = new com.mycompany.swing.Panel();
         jPanel1 = new javax.swing.JPanel();
-        panelMenu = new com.mycompany.ui.PanelMenu();
-        Menu1 = new com.mycompany.ui.Panel();
-        MenuIcon1 = new com.mycompany.ui.Panel();
+        panelMenu = new com.mycompany.swing.PanelMenu();
+        Menu1 = new com.mycompany.swing.Panel();
+        MenuIcon1 = new com.mycompany.swing.Panel();
         jPanel7 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        Menu2 = new com.mycompany.ui.Panel();
-        MenuIcon2 = new com.mycompany.ui.Panel();
+        Menu2 = new com.mycompany.swing.Panel();
+        MenuIcon2 = new com.mycompany.swing.Panel();
         jPanel5 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        panelMain1 = new com.mycompany.ui.PanelMain();
-        panel2 = new com.mycompany.ui.Panel();
-        panelButton2 = new com.mycompany.ui.PanelButton();
-        panel5 = new com.mycompany.ui.Panel();
+        panelMain1 = new com.mycompany.swing.PanelMain();
+        panel2 = new com.mycompany.swing.Panel();
+        panelButton2 = new com.mycompany.swing.PanelButton();
+        panel5 = new com.mycompany.swing.Panel();
 
         javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
         panel3.setLayout(panel3Layout);
@@ -70,7 +70,7 @@ public class Main extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 102, 0));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/icon/artists.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\artists.png"));
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         MenuIcon1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 50));
@@ -198,7 +198,7 @@ public class Main extends javax.swing.JFrame {
         );
         panelButton2Layout.setVerticalGroup(
             panelButton2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 86, Short.MAX_VALUE)
+            .addGap(0, 98, Short.MAX_VALUE)
             .addGroup(panelButton2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelButton2Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -277,10 +277,10 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.mycompany.ui.Panel Menu1;
-    private com.mycompany.ui.Panel Menu2;
-    private com.mycompany.ui.Panel MenuIcon1;
-    private com.mycompany.ui.Panel MenuIcon2;
+    private com.mycompany.swing.Panel Menu1;
+    private com.mycompany.swing.Panel Menu2;
+    private com.mycompany.swing.Panel MenuIcon1;
+    private com.mycompany.swing.Panel MenuIcon2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -288,11 +288,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel7;
-    private com.mycompany.ui.Panel panel2;
-    private com.mycompany.ui.Panel panel3;
-    private com.mycompany.ui.Panel panel5;
-    private com.mycompany.ui.PanelButton panelButton2;
-    private com.mycompany.ui.PanelMain panelMain1;
-    private com.mycompany.ui.PanelMenu panelMenu;
+    private com.mycompany.swing.Panel panel2;
+    private com.mycompany.swing.Panel panel3;
+    private com.mycompany.swing.Panel panel5;
+    private com.mycompany.swing.PanelButton panelButton2;
+    private com.mycompany.swing.PanelMain panelMain1;
+    private com.mycompany.swing.PanelMenu panelMenu;
     // End of variables declaration//GEN-END:variables
 }

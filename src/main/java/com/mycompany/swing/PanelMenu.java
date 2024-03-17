@@ -1,5 +1,5 @@
 
-package com.mycompany.ui;
+package com.mycompany.swing;
 
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -9,8 +9,8 @@ import java.awt.Graphics2D;
 import java.awt.GradientPaint;
 
 
-public class PanelMain extends JPanel {
-    public PanelMain(){
+public class PanelMenu extends JPanel {
+    public PanelMenu(){
             setOpaque(false);
     }
 

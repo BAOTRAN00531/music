@@ -1,5 +1,5 @@
 
-package com.mycompany.ui;
+package com.mycompany.swing;
 
 import java.awt.Color;
 import javax.swing.JPanel;
