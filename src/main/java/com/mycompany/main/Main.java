@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class Main extends javax.swing.JFrame {
 
-    
+    ///
     public Main() {
       
         initComponents();
