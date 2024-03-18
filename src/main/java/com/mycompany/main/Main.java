@@ -67,6 +67,7 @@ public class Main extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 153, 0));
         jPanel7.setLayout(new java.awt.BorderLayout());
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\search.png"));
         jPanel7.add(jLabel2, java.awt.BorderLayout.CENTER);
 
@@ -75,6 +76,7 @@ public class Main extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 102, 0));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\home.png"));
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
