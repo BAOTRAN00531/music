@@ -28,6 +28,7 @@ public class Main extends javax.swing.JFrame {
         Menu1 = new com.mycompany.swing.Panel();
         MenuIcon1 = new com.mycompany.swing.Panel();
         jPanel7 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -65,12 +66,16 @@ public class Main extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(255, 153, 0));
         jPanel7.setLayout(new java.awt.BorderLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\search.png"));
+        jPanel7.add(jLabel2, java.awt.BorderLayout.CENTER);
+
         MenuIcon1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 100, 50));
 
         jPanel4.setBackground(new java.awt.Color(102, 102, 0));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\artists.png"));
+        jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\home.png"));
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         MenuIcon1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 50));
@@ -282,6 +287,7 @@ public class Main extends javax.swing.JFrame {
     private com.mycompany.swing.Panel MenuIcon1;
     private com.mycompany.swing.Panel MenuIcon2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
