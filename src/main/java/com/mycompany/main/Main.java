@@ -2,11 +2,13 @@
 package com.mycompany.main;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.*;
 
 public class Main extends javax.swing.JFrame {
 
     ///
+    boolean a = true;
     public Main() {
       
         initComponents();
@@ -17,7 +19,15 @@ public class Main extends javax.swing.JFrame {
         Color col = new Color(0,0,0,0); // xoá nền
         setBackground(col);
     }
-
+    
+    public void hideshow (JPanel menushowhide, boolean dashboard){
+        if(dashboard == true){
+            menushowhide.setPreferredSize(new Dimension(0,menushowhide.getHeight()));
+        }
+        else{
+            menushowhide.setPreferredSize(new Dimension(474,menushowhide.getHeight()));
+        }
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -78,6 +88,11 @@ public class Main extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\home.png"));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         MenuIcon1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 50));
@@ -100,12 +115,18 @@ public class Main extends javax.swing.JFrame {
         Menu1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         Menu2.setForeground(new java.awt.Color(204, 255, 204));
+        Menu2.setPreferredSize(new java.awt.Dimension(328, 322));
         Menu2.setLayout(new java.awt.BorderLayout());
 
         MenuIcon2.setForeground(new java.awt.Color(102, 204, 0));
         MenuIcon2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -250,6 +271,25 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+  
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        if(a==true){
+            hideshow(Menu1,a);
+            hideshow(Menu2,a);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=false;
+        }
+        else{
+            hideshow(Menu1,a);
+            hideshow(Menu2,a);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }//GEN-LAST:event_jPanel5MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
