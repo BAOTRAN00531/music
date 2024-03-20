@@ -4,20 +4,23 @@ package com.mycompany.main;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.*;
+import com.mycompany.swing.ComponentResizer;
 
 public class Main extends javax.swing.JFrame {
 
-    ///
+    
     boolean a = true;
-    public Main() {
-      
+    public Main() { 
         initComponents();
         init();
-        
+        ComponentResizer resizer = new ComponentResizer();
+        resizer.registerComponent(this);
     }
+    
     public void init(){
-        Color col = new Color(0,0,0,0); // xoá nền
-        setBackground(col);
+        // đang lỗi khi bỏ vào nó chớp tắt khi thay đổi cửa sổ
+//        Color col = new Color(0,0,0,0); // xoá nền
+//        setBackground(col);
     }
     
     public void hideshow (JPanel menushowhide, boolean dashboard){
@@ -88,11 +91,6 @@ public class Main extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\home.png"));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         MenuIcon1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 100, 50));
@@ -122,11 +120,6 @@ public class Main extends javax.swing.JFrame {
         MenuIcon2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(255, 102, 102));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -272,11 +265,11 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                     
   
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }                                    
 
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {                                     
         if(a==true){
             hideshow(Menu1,a);
             hideshow(Menu2,a);
@@ -289,7 +282,7 @@ public class Main extends javax.swing.JFrame {
             SwingUtilities.updateComponentTreeUI(this);
             a=true;
         }
-    }//GEN-LAST:event_jPanel5MouseClicked
+    }                                    
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
