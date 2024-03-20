@@ -7,7 +7,7 @@ import javax.swing.*;
 import com.mycompany.swing.ComponentResizer;
 
 public class Main extends javax.swing.JFrame {
-
+//checks
     
     boolean a = true;
     public Main() { 
