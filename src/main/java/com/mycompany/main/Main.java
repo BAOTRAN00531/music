@@ -2,22 +2,35 @@
 package com.mycompany.main;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.*;
+import com.mycompany.swing.ComponentResizer;
 
 public class Main extends javax.swing.JFrame {
-
+//checks
     
-    public Main() {
-      
+    boolean a = true;
+    public Main() { 
         initComponents();
         init();
-        
+        ComponentResizer resizer = new ComponentResizer();
+        resizer.registerComponent(this);
     }
+    
     public void init(){
-        Color col = new Color(0,0,0,0); // xoá nền
-        setBackground(col);
+        // đang lỗi khi bỏ vào nó chớp tắt khi thay đổi cửa sổ
+//        Color col = new Color(0,0,0,0); // xoá nền
+//        setBackground(col);
     }
-
+    
+    public void hideshow (JPanel menushowhide, boolean dashboard){
+        if(dashboard == true){
+            menushowhide.setPreferredSize(new Dimension(0,menushowhide.getHeight()));
+        }
+        else{
+            menushowhide.setPreferredSize(new Dimension(474,menushowhide.getHeight()));
+        }
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -67,6 +80,7 @@ public class Main extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 153, 0));
         jPanel7.setLayout(new java.awt.BorderLayout());
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\search.png"));
         jPanel7.add(jLabel2, java.awt.BorderLayout.CENTER);
 
@@ -75,6 +89,7 @@ public class Main extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 102, 0));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir") + "\\src\\main\\java\\com\\mycompany\\icon\\home.png"));
         jPanel4.add(jLabel1, java.awt.BorderLayout.CENTER);
 
@@ -98,6 +113,7 @@ public class Main extends javax.swing.JFrame {
         Menu1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         Menu2.setForeground(new java.awt.Color(204, 255, 204));
+        Menu2.setPreferredSize(new java.awt.Dimension(328, 322));
         Menu2.setLayout(new java.awt.BorderLayout());
 
         MenuIcon2.setForeground(new java.awt.Color(102, 204, 0));
@@ -248,6 +264,25 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                     
+  
+    }                                    
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        if(a==true){
+            hideshow(Menu1,a);
+            hideshow(Menu2,a);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=false;
+        }
+        else{
+            hideshow(Menu1,a);
+            hideshow(Menu2,a);
+            SwingUtilities.updateComponentTreeUI(this);
+            a=true;
+        }
+    }                                    
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
