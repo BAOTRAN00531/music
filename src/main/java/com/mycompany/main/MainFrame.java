@@ -8,6 +8,11 @@ import java.awt.Color;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import javax.swing.border.Border;
+import javax.swing.plaf.basic.BasicSplitPaneDivider;
+import javax.swing.plaf.basic.BasicSplitPaneUI;
 
 public class MainFrame extends JFrame {
 
@@ -34,7 +39,16 @@ public class MainFrame extends JFrame {
         splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, menuPanel, mainPanel);
         splitPane.setDividerSize(0); 
         splitPane.setResizeWeight(0.2); 
-
+        
+        // Ẩn giao diện mặc định của JSplitPane khi được thêm vào
+        splitPane.setUI(new BasicSplitPaneUI() {
+            public BasicSplitPaneDivider createDefaultDivider() {
+                return new BasicSplitPaneDivider(this) {
+                    public void setBorder(Border b) {} // Không cần viền
+                    public void paint(Graphics g) {} // Không cần vẽ giao diện mặc định
+                };
+            }
+        });
         
         splitPane.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
